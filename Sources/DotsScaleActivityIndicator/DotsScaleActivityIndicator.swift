@@ -13,10 +13,12 @@ public struct DotsScaleActivityIndicator: View {
     @State private var shouldAnimate = false
     let diameter: CGFloat
     let color: Color
+    let height: CGFloat?
 
-    public init(diametre: CGFloat? = 8, color: Color? = .blue) {
+    public init(diametre: CGFloat? = 8, color: Color? = .blue, height: CGFloat? = 12) {
         self.diameter = diametre ?? 8
         self.color = color ?? .blue
+        self.height = height ?? 12
     }
 
     public var body: some View {
@@ -37,7 +39,7 @@ public struct DotsScaleActivityIndicator: View {
                     .scaleEffect(shouldAnimate ? 1.0 : 0.5)
                     .animation(Animation.easeInOut(duration: 0.5).repeatForever().delay(0.6))
         }
-        .frame(height: 12)
+        .frame(height: height)
         .onAppear {
             self.shouldAnimate = true
         }

@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "Loading Animations",
             targets: ["Loading Animations"]),
+        .library(
+            name: "DotsScaleActivityIndicator",
+            targets: ["DotsScaleActivityIndicator"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,8 +24,11 @@ let package = Package(
         .target(
             name: "Loading Animations",
             dependencies: []),
+        .target(
+            name: "DotsScaleActivityIndicator",
+            dependencies: []),
         .testTarget(
             name: "Loading AnimationsTests",
-            dependencies: ["Loading Animations"]),
+            dependencies: ["Loading Animations"])
     ]
 )

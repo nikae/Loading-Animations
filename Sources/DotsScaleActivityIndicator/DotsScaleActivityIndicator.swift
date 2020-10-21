@@ -21,7 +21,6 @@ public struct DotsScaleActivityIndicator: View {
 
     public var body: some View {
         HStack {
-            if shouldAnimate {
                 Circle()
                     .fill(color)
                     .frame(width: diameter, height: diameter)
@@ -37,18 +36,12 @@ public struct DotsScaleActivityIndicator: View {
                     .frame(width: diameter, height: diameter)
                     .scaleEffect(shouldAnimate ? 1.0 : 0.5)
                     .animation(Animation.easeInOut(duration: 0.5).repeatForever().delay(0.6))
-            }
         }
         .frame(height: 12)
-        .padding()
         .onAppear {
             self.shouldAnimate = true
         }
-        .onDisappear {
-            self.shouldAnimate = false
-        }
     }
-
 }
 
 //public struct DotsScaleActivityIndicator_Previews: PreviewProvider {

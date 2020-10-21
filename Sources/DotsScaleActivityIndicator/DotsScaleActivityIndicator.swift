@@ -35,9 +35,20 @@ public struct DotsScaleActivityIndicator: View {
                 .scaleEffect(shouldAnimate ? 1.0 : 0.5)
                 .animation(Animation.easeInOut(duration: 0.5).repeatForever().delay(0.6))
         }
+        .frame(height: 12)
         .onAppear {
             self.shouldAnimate = true
+        }
+        .onDisappear {
+            self.shouldAnimate = false
         }
     }
 
 }
+
+//public struct DotsScaleActivityIndicator_Previews: PreviewProvider {
+//    @available(OSX 10.15.0, *)
+//    public static var previews: some View {
+//            DotsScaleActivityIndicator()
+//    }
+//}

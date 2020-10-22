@@ -1,5 +1,5 @@
 //
-//  DotsScaleActivityIndicator.swift
+//  ScalingDotsActivityIndicator.swift
 //  
 //
 //  Created by Nika on 10/21/20.
@@ -9,13 +9,14 @@ import SwiftUI
 
 @available(iOS 13.0, macOS 10.15, *)
 
-public struct DotsScaleActivityIndicator: View {
+//Rename this to Scaling Dots
+public struct ScalingDotsActivityIndicator: View {
     @State private var shouldAnimate = false
     let diameter: CGFloat
     let color: Color
     let height: CGFloat?
 
-    public init(diametre: CGFloat? = 8, color: Color? = .blue, height: CGFloat? = 12) {
+    public init(diametre: CGFloat? = 8, height: CGFloat? = 12, color: Color? = .blue) {
         self.diameter = diametre ?? 8
         self.color = color ?? .blue
         self.height = height ?? 12
@@ -49,6 +50,6 @@ public struct DotsScaleActivityIndicator: View {
 //public struct DotsScaleActivityIndicator_Previews: PreviewProvider {
 //    @available(iOS 13.0.0, *)
 //    public static var previews: some View {
-//            DotsScaleActivityIndicator()
+//            ScalingDotsActivityIndicator()
 //    }
 //}

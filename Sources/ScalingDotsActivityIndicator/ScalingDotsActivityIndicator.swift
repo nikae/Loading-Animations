@@ -13,8 +13,8 @@ import SwiftUI
 public struct ScalingDotsActivityIndicator: View {
     @State private var shouldAnimate = false
     let diameter: CGFloat
-    let color: Color
     let height: CGFloat?
+    let color: Color
 
     public init(diametre: CGFloat? = 8, height: CGFloat? = 12, color: Color? = .blue) {
         self.diameter = diametre ?? 8

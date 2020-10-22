@@ -15,7 +15,10 @@ let package = Package(
             targets: ["ScalingDotsActivityIndicator"]),
         .library(
             name: "DotsCircularAnimation",
-            targets: ["DotsCircularAnimation"])
+            targets: ["DotsCircularAnimation"]),
+        .library(
+            name: "CircleWavesAnimation",
+            targets: ["CircleWavesAnimation"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -32,6 +35,9 @@ let package = Package(
             dependencies: []),
         .target(
             name: "DotsCircularAnimation",
+            dependencies: []),
+        .target(
+            name: "CircleWavesAnimation",
             dependencies: []),
         .testTarget(
             name: "Loading AnimationsTests",

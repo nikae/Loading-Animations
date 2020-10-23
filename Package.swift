@@ -8,9 +8,6 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Loading Animations",
-            targets: ["Loading Animations"]),
-        .library(
             name: "ScalingDotsActivityIndicator",
             targets: ["ScalingDotsActivityIndicator"]),
         .library(
@@ -18,7 +15,10 @@ let package = Package(
             targets: ["DotsCircularAnimation"]),
         .library(
             name: "CircleWavesAnimation",
-            targets: ["CircleWavesAnimation"])
+            targets: ["CircleWavesAnimation"]),
+        .library(
+            name: "CircleLinesAnimation",
+            targets: ["CircleLinesAnimation"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -28,9 +28,6 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "Loading Animations",
-            dependencies: []),
-        .target(
             name: "ScalingDotsActivityIndicator",
             dependencies: []),
         .target(
@@ -39,8 +36,8 @@ let package = Package(
         .target(
             name: "CircleWavesAnimation",
             dependencies: []),
-        .testTarget(
-            name: "Loading AnimationsTests",
-            dependencies: ["Loading Animations"])
+        .target(
+            name: "CircleLinesAnimation",
+            dependencies: [])
     ]
 )

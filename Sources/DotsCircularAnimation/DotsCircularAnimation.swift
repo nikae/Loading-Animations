@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
 public struct DotsCircularAnimation: View {
 
     @State var isAnimating: Bool = false
@@ -40,7 +39,6 @@ public struct DotsCircularAnimation: View {
 }
 
 struct DotsCircularAnimation_Previews: PreviewProvider {
-    @available(iOS 13.0.0, *)
     static var previews: some View {
         DotsCircularAnimation()
     }

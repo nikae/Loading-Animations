@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 13.0, macOS 10.15, *)
-
 //Rename this to Scaling Dots
 public struct ScalingDotsActivityIndicator: View {
     @State private var shouldAnimate = false
